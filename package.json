@@ -2,8 +2,11 @@
   "name": "jj",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "test.js",
   "scripts": {
+    "build": "browserify src/app.js -t babelify --outfile lib/app.js",
+    "start": "npm run build && npm run server",
+    "server": "babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
